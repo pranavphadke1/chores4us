@@ -10,6 +10,14 @@ function App() {
         <img className="add-task-button" src={buttonpng} />
         <img className="add-check-button" src={checkpng} />
       </div>
+
+      <div className="completed-container" >
+        <div className="completed-tasks-title" > Completed Tasks </div>
+        
+
+      </div>
+
+
     </div>
   );
 }
