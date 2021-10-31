@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import buttonpng from "./button1.png"
+import checkpng from "./check2.png"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="tasks-container" >
+        <div className="tasks-title" > Chores4Us </div>
+        <img className="add-task-button" src={buttonpng} />
+        <img className="add-check-button" src={checkpng} />
+      </div>
     </div>
   );
 }
