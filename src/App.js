@@ -11,8 +11,21 @@ function App() {
         <img className="add-check-button" src={checkpng} />
       </div>
 
+      <div className="add-task-container" >
+        <div className="add-task-title" > Add Task</div>
+        <div className="title" > Title: </div>
+        <div className="title-box"></div>
+        <div className="description"> Description:</div>
+        <div className="description-box"></div>
+        <div className="assignee">Assignee:</div>
+        <div className="assignee-box"></div>
+        <div className="due-date">Due Date:</div>
+        <div className="due-date-box"></div>
+      </div>
+
       <div className="completed-container" >
         <div className="completed-tasks-title" > Completed Tasks </div>
+      
         
 
       </div>
