@@ -45,12 +45,11 @@ color: #000000;
 
 
 .add-check-button{
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
+  position: relative;
   width: 77px;
   height: 93px;
-  background: #FFFFFF;
+  left: 195px;
+  top: 400px;
 
 }
 
@@ -118,6 +117,15 @@ border-radius: 100px;
   text-align: center;
 
   color: #000000;
+}
+
+.add-back-arrow-button
+{
+  position: relative;
+  top: 440px;
+  left: -195px;
+  width: 90px;
+  height: 44px;
 }
 
 .add-task-container{

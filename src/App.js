@@ -1,6 +1,7 @@
 import './App.css';
 import buttonpng from "./button1.png"
 import checkpng from "./check2.png"
+import backarrow from "./Arrow1.png"
 import cancelpng from "./cancel-button.png"
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
 
       <div className="completed-container" >
         <div className="completed-tasks-title" > Completed Tasks </div>
+        <img className="add-back-arrow-button" src={backarrow} />
+        
       </div>
 
       <div className="add-task-container">
