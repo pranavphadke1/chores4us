@@ -1,6 +1,7 @@
 import './App.css';
 import buttonpng from "./button1.png"
 import checkpng from "./check2.png"
+import cancelpng from "./cancel-button.png"
 
 function App() {
   return (
@@ -25,10 +26,12 @@ function App() {
 
       <div className="completed-container" >
         <div className="completed-tasks-title" > Completed Tasks </div>
-      
-        
-
       </div>
+
+      <div className="add-task-container">
+        <img className="cancel-button" src={cancelpng} />
+      </div>
+
 
 
     </div>
