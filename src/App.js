@@ -22,6 +22,13 @@ function App() {
         <div className="assignee-box"></div>
         <div className="due-date">Due Date:</div>
         <div className="due-date-box"></div>
+        <div className="frequency">Frequency:</div>
+        <div className="daily-button"></div>
+        <div className="daily">Daily</div>
+        <div className="weekly-button"></div>
+        <div className="weekly">Weekly</div>
+        <div className="bi-weekly-button"></div>
+        <div className="bi-weekly">Bi-Weekly</div>
       </div>
 
       <div className="completed-container" >

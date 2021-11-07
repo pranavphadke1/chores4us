@@ -287,3 +287,128 @@ background: #C4C4C4;
 border: 3px solid #000000;
 box-sizing: border-box;
 }
+
+.frequency{
+  position: absolute;
+width: 152px;
+height: 21px;
+left: 20px;
+top:220px;
+z-index: 1;
+
+font-family: Wendy One;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 21px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+}
+
+.daily-button{
+  position: absolute;
+width: 16px;
+height: 14px;
+left: 180px;
+top:220px;
+z-index: 1;
+
+background: #C4C4C4;
+border: 3px solid #000000;
+box-sizing: border-box;
+border-radius: 100px;
+}
+.weekly-button{
+  position: absolute;
+width: 16px;
+height: 14px;
+left: 180px;
+top:245px;
+z-index: 1;
+
+background: #C4C4C4;
+border: 3px solid #000000;
+box-sizing: border-box;
+border-radius: 100px;
+}
+
+.bi-weekly-button{
+  position: absolute;
+width: 16px;
+height: 14px;
+left: 180px;
+top:270px;
+z-index: 1;
+
+background: #C4C4C4;
+border: 3px solid #000000;
+box-sizing: border-box;
+border-radius: 100px;
+}
+.daily{
+  position: absolute;
+width: 135px;
+height: 21px;
+left: 210px;
+top:216px;
+z-index: 1;
+
+font-family: Wendy One;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 21px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+}
+
+.weekly{
+  position: absolute;
+  width: 135px;
+  height: 21px;
+  left: 210px;
+  top:240px;
+  z-index: 1;
+  
+  font-family: Wendy One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 21px;
+  /* identical to box height */
+  display: flex;
+  align-items: center;
+  
+  color: #000000;
+  
+}
+
+.bi-weekly{
+  position: absolute;
+width: 135px;
+height: 21px;
+left: 210px;
+top:266px;
+z-index: 1;
+
+font-family: Wendy One;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 21px;
+/* identical to box height */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+}
