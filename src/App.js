@@ -3,6 +3,7 @@ import buttonpng from "./button1.png"
 import checkpng from "./check2.png"
 import backarrow from "./Arrow1.png"
 import cancelpng from "./cancel-button.png"
+import addTaskpng from "./addTask.png"
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
 
       <div className="add-task-container">
         <img className="cancel-button" src={cancelpng} />
+        <img className="mark-completed-task-button" src={addTaskpng} />
       </div>
 
 
