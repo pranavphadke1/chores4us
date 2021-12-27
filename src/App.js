@@ -4,6 +4,8 @@ import checkpng from "./check2.png"
 import backarrow from "./Arrow1.png"
 import cancelpng from "./cancel-button.png"
 import addTaskpng from "./addTask.png"
+import ReactDOM from 'react-dom';
+import React from 'react';
 
 function App() {
   return (
@@ -17,7 +19,9 @@ function App() {
       <div className="add-task-container" >
         <div className="add-task-title" > Add Task</div>
         <div className="title" > Title: </div>
-        <div className="title-box"></div>
+        <div
+         className="title-box">
+        </div>
         <div className="description"> Description:</div>
         <div className="description-box"></div>
         <div className="assignee">Assignee:</div>
@@ -44,10 +48,24 @@ function App() {
         <img className="mark-completed-task-button" src={addTaskpng} />
       </div>
 
-
-
     </div>
+
   );
 }
+
+/*class AppTwo extends React.Component {
+  state = { name: '' };
+  render() {
+      return (
+          < div >
+              Enter your name: <input type="text" value=   {this.state.name} onChange={e => this.setState({ name:e.target.value })} />
+              <div>Hi {this.state.name}!</div>
+          </div >
+      );
+  }
+}
+
+ReactDOM.render(<AppTwo />, document.getElementById('root')); */
+
 
 export default App;
