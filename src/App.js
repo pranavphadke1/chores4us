@@ -19,8 +19,13 @@ function App() {
       <div className="add-task-container" >
         <div className="add-task-title" > Add Task</div>
         <div className="title" > Title: </div>
-        <div
-         className="title-box">
+        <div className="title-box">
+          <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
+            <div class="input">
+                <input type="text" name="name" id="form-name" required/>
+                <label for="form-name">Name:</label>
+            </div>
+          </form>
         </div>
         <div className="description"> Description:</div>
         <div className="description-box"></div>
