@@ -1,413 +1,369 @@
-.App
-{
-  text-align: center;
+.App {
+    text-align: center;
 }
 
-.tasks-container
-{
-position: absolute;
-left: 10px;
-width: 486px;
-height: 538px;
-
-background: #F2EBD1;
-border: 7px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.tasks-container {
+    position: absolute;
+    left: 10px;
+    width: 486px;
+    height: 538px;
+    background: #F2EBD1;
+    border: 7px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Wendy+One&display=swap');
-
-.tasks-title
-{
-/* position: absolute; */
-/* width: 100px; */
-/* height: 38px; */
-
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 36px;
-line-height: 38px;
-/* identical to box height */
-
-color: #000000;
+.tasks-title {
+    /* position: absolute; */
+    /* width: 100px; */
+    /* height: 38px; */
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 38px;
+    /* identical to box height */
+    color: #000000;
 }
 
-.add-task-button{
-  position: absolute;
-  left: -5px;
-  bottom: 5px;
-  width: 93px;
-  height: 68px;
+.add-task-button {
+    position: absolute;
+    left: -5px;
+    bottom: 5px;
+    width: 93px;
+    height: 68px;
 }
 
-.add-check-button{
-  position: relative;
-  width: 77px;
-  height: 93px;
-  left: 195px;
-  top: 400px;
-
+.add-check-button {
+    position: relative;
+    width: 77px;
+    height: 93px;
+    left: 195px;
+    top: 400px;
 }
 
-.add-task-container{
-  position: absolute;
-  top: 600px;
-  left: 10px;
-  width: 483px;
-  height: 323px;
-  background: #E4C4C4;
-  border: 6px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.add-task-container {
+    position: absolute;
+    top: 600px;
+    left: 10px;
+    width: 483px;
+    height: 323px;
+    background: #E4C4C4;
+    border: 6px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.completed-container{
-  position: absolute;
-  left: 500px;
-  width: 486px;
-  height: 538px;
-
-  background: #D1E2F2;
-  border: 7px solid #000000;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.completed-container {
+    position: absolute;
+    left: 500px;
+    width: 486px;
+    height: 538px;
+    background: #D1E2F2;
+    border: 7px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.cancel{
-position: relative;
-height: 46px;
-width: 48px;
-
-border-radius: 100px;
-
-background: #E4C4C4;
-border: 6px solid #000000;
-border-radius: 100px;
+.cancel {
+    position: relative;
+    height: 46px;
+    width: 48px;
+    border-radius: 100px;
+    background: #E4C4C4;
+    border: 6px solid #000000;
+    border-radius: 100px;
 }
 
-.cancel-button{
-  position: absolute;
-  right: -15px;
-  bottom: -5px;
+.cancel-button {
+    position: absolute;
+    right: -15px;
+    bottom: -5px;
 }
 
-.mark-completed-task-button
-{  
-  position: relative;
-  width: 32px;
-  height: 52px;
-  right: 215px;
-  margin-top: 262px;
+.mark-completed-task-button {
+    position: relative;
+    width: 32px;
+    height: 52px;
+    right: 215px;
+    margin-top: 262px;
 }
 
-.completed-tasks-title{
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 291px;
-  height: 38px;
-
-  font-family: Wendy One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 38px;
-  /* identical to box height */
-
-  display: flex;
-  align-items: center;
-  text-align: center;
-
-  color: #000000;
+.completed-tasks-title {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 291px;
+    height: 38px;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 38px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
 
-.add-back-arrow-button
-{
-  position: relative;
-  top: 440px;
-  left: -195px;
-  width: 90px;
-  height: 44px;
+.add-back-arrow-button {
+    position: relative;
+    top: 440px;
+    left: -195px;
+    width: 90px;
+    height: 44px;
 }
 
-.add-task-title{
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  z-index: 1;
-width: 171px;
-height: 29px;
-
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 32px;
-line-height: 34px;
-text-align: center;
-
-color: #000000;
-
+.add-task-title {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: 171px;
+    height: 29px;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 34px;
+    text-align: center;
+    color: #000000;
 }
 
-.title{
-  position: absolute;
-  left: 50px;
-  top: 50px;
-  z-index: 1;
-width: 49px;
-height: 25px;
-
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 21px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
+.title {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    z-index: 1;
+    width: 49px;
+    height: 25px;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
 
-.title-box{
-  position: absolute;
-  top: 50px;
-  left: 180px;
-  z-index: 1;
-width: 265px;
-height: 21px;
-
-background: #C4C4C4;
-border: 3px solid #000000;
-box-sizing: border-box;
+.title-box {
+    position: absolute;
+    top: 50px;
+    left: 180px;
+    z-index: 1;
+    width: 265px;
+    height: 21px;
+    background: #C4C4C4;
+    border: 3px solid #000000;
+    box-sizing: border-box;
 }
 
-.description{
-  position: absolute;
-  left: 30px;
-  top: 100px;
-  z-index: 1;
-width: 152px;
-height: 21px;
-
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 21px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
+.description {
+    position: absolute;
+    left: 30px;
+    top: 100px;
+    z-index: 1;
+    width: 152px;
+    height: 21px;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
 
-.description-box{
-  position: absolute;
-width: 265px;
-height: 57px;
-z-index: 1;
-left: 180px;
-  top: 80px;
-
-background: #C4C4C4;
-border: 3px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.description-box {
+    position: absolute;
+    width: 265px;
+    height: 57px;
+    z-index: 1;
+    left: 180px;
+    top: 80px;
+    background: #C4C4C4;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.assignee{
-  position: absolute;
-  left: 30px;
-  top: 152px;
-  z-index: 1;
-width: 152px;
-height: 21px;
-
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 21px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-
+.assignee {
+    position: absolute;
+    left: 30px;
+    top: 152px;
+    z-index: 1;
+    width: 152px;
+    height: 21px;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
 
-.assignee-box{
-  position: absolute;
-  left: 180px;
-  top: 150px;
-  z-index: 1;
-width: 265px;
-height: 21px;
-
-background: #C4C4C4;
-border: 3px solid #000000;
-box-sizing: border-box;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.assignee-box {
+    position: absolute;
+    left: 180px;
+    top: 150px;
+    z-index: 1;
+    width: 265px;
+    height: 21px;
+    background: #C4C4C4;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.due-date{
-  position: absolute;
-  left: 30px;
-  top:185px;
-  z-index: 1;
-width: 152px;
-height: 24px;
-
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 21px;
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-}
-.due-date-box{
-  position: absolute;
-  left: 180px;
-  top:185px;
-  z-index: 1;
-width: 265px;
-height: 21px;
-
-background: #C4C4C4;
-border: 3px solid #000000;
-box-sizing: border-box;
+.due-date {
+    position: absolute;
+    left: 30px;
+    top: 185px;
+    z-index: 1;
+    width: 152px;
+    height: 24px;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
 
-.frequency{
-  position: absolute;
-width: 152px;
-height: 21px;
-left: 20px;
-top:220px;
-z-index: 1;
-
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 21px;
-/* identical to box height */
-display: flex;
-align-items: center;
-text-align: center;
-
-color: #000000;
-
+.due-date-box {
+    position: absolute;
+    left: 180px;
+    top: 185px;
+    z-index: 1;
+    width: 265px;
+    height: 21px;
+    background: #C4C4C4;
+    border: 3px solid #000000;
+    box-sizing: border-box;
 }
 
-.daily-button{
-  position: absolute;
-width: 16px;
-height: 14px;
-left: 180px;
-top:220px;
-z-index: 1;
-
-background: #C4C4C4;
-border: 3px solid #000000;
-box-sizing: border-box;
-border-radius: 100px;
-}
-.weekly-button{
-  position: absolute;
-width: 16px;
-height: 14px;
-left: 180px;
-top:245px;
-z-index: 1;
-
-background: #C4C4C4;
-border: 3px solid #000000;
-box-sizing: border-box;
-border-radius: 100px;
+.frequency {
+    position: absolute;
+    width: 152px;
+    height: 21px;
+    left: 20px;
+    top: 220px;
+    z-index: 1;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #000000;
 }
 
-.bi-weekly-button{
-  position: absolute;
-width: 16px;
-height: 14px;
-left: 180px;
-top:270px;
-z-index: 1;
-
-background: #C4C4C4;
-border: 3px solid #000000;
-box-sizing: border-box;
-border-radius: 100px;
-}
-.daily{
-  position: absolute;
-width: 135px;
-height: 21px;
-left: 210px;
-top:216px;
-z-index: 1;
-
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 21px;
-/* identical to box height */
-display: flex;
-align-items: center;
-
-color: #000000;
-
+.daily-button {
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    left: 180px;
+    top: 220px;
+    z-index: 1;
+    background: #C4C4C4;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
 }
 
-.weekly{
-  position: absolute;
-  width: 135px;
-  height: 21px;
-  left: 210px;
-  top:240px;
-  z-index: 1;
-  
-  font-family: Wendy One;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 21px;
-  /* identical to box height */
-  display: flex;
-  align-items: center;
-  
-  color: #000000;
-  
+.weekly-button {
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    left: 180px;
+    top: 245px;
+    z-index: 1;
+    background: #C4C4C4;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
 }
 
-.bi-weekly{
-position: absolute;
-width: 135px;
-height: 21px;
-left: 210px;
-top:266px;
-z-index: 1;
+.bi-weekly-button {
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    left: 180px;
+    top: 270px;
+    z-index: 1;
+    background: #C4C4C4;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
 
-font-family: Wendy One;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 21px;
-/* identical to box height */
-display: flex;
-align-items: center;
+.daily {
+    position: absolute;
+    width: 135px;
+    height: 21px;
+    left: 210px;
+    top: 216px;
+    z-index: 1;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
 
-color: #000000;
+.weekly {
+    position: absolute;
+    width: 135px;
+    height: 21px;
+    left: 210px;
+    top: 240px;
+    z-index: 1;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: #000000;
+}
 
+.bi-weekly {
+    position: absolute;
+    width: 135px;
+    height: 21px;
+    left: 210px;
+    top: 266px;
+    z-index: 1;
+    font-family: Wendy One;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 21px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    color: #000000;
 }
