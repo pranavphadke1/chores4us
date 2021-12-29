@@ -23,16 +23,37 @@ function App() {
           <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
             <div class="input">
                 <input type="text" name="name" id="form-name" required/>
-                <label for="form-name">Name:</label>
+                <label for="form-name"></label>
             </div>
           </form>
         </div>
         <div className="description"> Description:</div>
-        <div className="description-box"></div>
+        <div className="description-box">
+        <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
+            <div class="input">
+                <input type="text" name="name" id="form-name" required/>
+                <label for="form-name"></label>
+            </div>
+          </form>
+        </div>
         <div className="assignee">Assignee:</div>
-        <div className="assignee-box"></div>
+        <div className="assignee-box">
+        <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
+            <div class="input">
+                <input type="text" name="name" id="form-name" required/>
+                <label for="form-name"></label>
+            </div>
+          </form>
+        </div>
         <div className="due-date">Due Date:</div>
-        <div className="due-date-box"></div>
+        <div className="due-date-box">
+        <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
+            <div class="input">
+                <input type="text" name="name" id="form-name" required/>
+                <label for="form-name"></label>
+            </div>
+          </form>
+        </div>
         <div className="frequency">Frequency:</div>
         <div className="daily-button"></div>
         <div className="daily">Daily</div>
