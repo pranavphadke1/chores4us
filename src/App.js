@@ -11,9 +11,15 @@ import React, { useState } from 'react';
 function App() {
 
   const [titleText, setTitleText] = useState("")
-
-  const handleChange = event => {
+  const [descriptionText, setDescriptionText] = useState("")
+  const [assigneeText, setAssigneeText] = useState("")
+  const [dueDateText, setDueDateText] = useState("")
+  const handleChange = event => 
+  {
     setTitleText( event.value );
+    setDescriptionText( event.value );
+    setAssigneeText( event.value );
+    setDueDateText( event.value );
   };
 
   return (
@@ -40,7 +46,7 @@ function App() {
         <div className="description-box">
         <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
             <div class="input">
-                <input type="text" name="name" id="description-box-form" required/>
+                <input type="text" name="name" id="description-box-form" value={descriptionText} onChange={handleChange} required/>
                 <label for="form-name"></label>
             </div>
           </form>
@@ -49,7 +55,7 @@ function App() {
         <div className="assignee-box">
         <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
             <div class="input">
-                <input type="text" name="name" id="assignee-box-form" required/>
+                <input type="text" name="name" id="assignee-box-form" value={assigneeText} onChange={handleChange} required/>
                 <label for="form-name"></label>
             </div>
           </form>
@@ -58,7 +64,7 @@ function App() {
         <div className="due-date-box">
         <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
             <div class="input">
-                <input type="text" name="name" id="due-date-box-form" required/>
+                <input type="text" name="name" id="due-date-box-form" value={dueDateText} onChange={handleChange} required/>
                 <label for="form-name"></label>
             </div>
           </form>
