@@ -5,10 +5,19 @@ import backarrow from "./Arrow1.png"
 import cancelpng from "./cancel-button.png"
 import addTaskpng from "./addTask.png"
 import ReactDOM from 'react-dom';
-import React from 'react';
+import React, { useState } from 'react';
+//import React from 'react';
 
 function App() {
+
+  const [titleText, setTitleText] = useState("")
+
+  const handleChange = event => {
+    setTitleText( event.value );
+  };
+
   return (
+    <React.Fragment>
     <div className="App">
       <div className="tasks-container" >
         <div className="tasks-title" > Chores4Us </div>
@@ -22,7 +31,7 @@ function App() {
         <div className="title-box">
           <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
             <div class="input">
-                <input type="text" name="name" id="form-name" required/>
+                <input type="text" name="name" id="title-box-form" value={titleText} onChange={handleChange} required />
                 <label for="form-name"></label>
             </div>
           </form>
@@ -31,7 +40,7 @@ function App() {
         <div className="description-box">
         <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
             <div class="input">
-                <input type="text" name="name" id="form-name" required/>
+                <input type="text" name="name" id="description-box-form" required/>
                 <label for="form-name"></label>
             </div>
           </form>
@@ -40,7 +49,7 @@ function App() {
         <div className="assignee-box">
         <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
             <div class="input">
-                <input type="text" name="name" id="form-name" required/>
+                <input type="text" name="name" id="assignee-box-form" required/>
                 <label for="form-name"></label>
             </div>
           </form>
@@ -49,7 +58,7 @@ function App() {
         <div className="due-date-box">
         <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
             <div class="input">
-                <input type="text" name="name" id="form-name" required/>
+                <input type="text" name="name" id="due-date-box-form" required/>
                 <label for="form-name"></label>
             </div>
           </form>
@@ -75,23 +84,9 @@ function App() {
       </div>
 
     </div>
+    </React.Fragment>
 
   );
 }
-
-/*class AppTwo extends React.Component {
-  state = { name: '' };
-  render() {
-      return (
-          < div >
-              Enter your name: <input type="text" value=   {this.state.name} onChange={e => this.setState({ name:e.target.value })} />
-              <div>Hi {this.state.name}!</div>
-          </div >
-      );
-  }
-}
-
-ReactDOM.render(<AppTwo />, document.getElementById('root')); */
-
 
 export default App;
