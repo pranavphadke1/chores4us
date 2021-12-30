@@ -21,6 +21,14 @@ function App() {
     setDueDateText(event.value);
   };
 
+  function handleTaskAdded (titleT)
+  {
+    setTitleText({
+      titleText : titleT
+    });
+    alert("A new task was added in the name of: " + titleT);
+  }
+
   return (
     <React.Fragment>
       <div className="App">
@@ -85,7 +93,7 @@ function App() {
 
         <div className="add-task-container">
           <img className="cancel-button" src={cancelpng} />
-          <img className="mark-completed-task-button" src={addTaskpng} />
+          <img className="mark-completed-task-button" src={addTaskpng} onClick={handleTaskAdded} />
         </div>
 
       </div>
