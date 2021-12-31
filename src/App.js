@@ -22,9 +22,8 @@ function App() {
     setDueDateText(event.value);
   };
 
-  function handleTaskAdded()
-  {
-      setTasks([...tasks, {titleText, descriptionText, assigneeText, dueDateText}]) // tasks is the current state and then you are updating with titleText
+  function handleTaskAdded() {
+    setTasks([...tasks, { titleText, descriptionText, assigneeText, dueDateText }]) // tasks is the current state and then you are updating with titleText
     alert("Task added: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
   }
   console.log(tasks) // testing component added to check if the tasks are being rendered properly
@@ -44,7 +43,7 @@ function App() {
           <div className="title-box">
             <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
               <div class="input">
-                <input type="text" name="name" id="title-box-form" value={titleText} onChange={( e ) => setTitleText(e.target.value)} required />
+                <input type="text" name="name" id="title-box-form" value={titleText} onChange={(e) => setTitleText(e.target.value)} required />
                 <label for="form-name"></label>
               </div>
             </form>
@@ -53,7 +52,7 @@ function App() {
           <div className="description-box">
             <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
               <div class="input">
-                <input type="text" name="name" id="description-box-form" value={descriptionText} onChange={( e ) => setDescriptionText(e.target.value)} required />
+                <input type="text" name="name" id="description-box-form" value={descriptionText} onChange={(e) => setDescriptionText(e.target.value)} required />
                 <label for="form-name"></label>
               </div>
             </form>
@@ -62,7 +61,7 @@ function App() {
           <div className="assignee-box">
             <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
               <div class="input">
-                <input type="text" name="name" id="assignee-box-form" value={assigneeText} onChange={( e ) => setAssigneeText(e.target.value)} required />
+                <input type="text" name="name" id="assignee-box-form" value={assigneeText} onChange={(e) => setAssigneeText(e.target.value)} required />
                 <label for="form-name"></label>
               </div>
             </form>
@@ -71,7 +70,7 @@ function App() {
           <div className="due-date-box">
             <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
               <div class="input">
-                <input type="text" name="name" id="due-date-box-form" value={dueDateText} onChange={( e ) => setDueDateText(e.target.value)} required />
+                <input type="text" name="name" id="due-date-box-form" value={dueDateText} onChange={(e) => setDueDateText(e.target.value)} required />
                 <label for="form-name"></label>
               </div>
             </form>
