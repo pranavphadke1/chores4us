@@ -36,11 +36,11 @@
 }
 
 .add-check-button {
-    position: relative;
+    position: absolute;
     width: 77px;
     height: 93px;
-    left: 195px;
-    top: 400px;
+    left: 400px;
+    top: 438px;
 }
 
 .add-task-container {
