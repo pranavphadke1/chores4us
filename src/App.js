@@ -4,9 +4,7 @@ import checkpng from "./check2.png"
 import backarrow from "./Arrow1.png"
 import cancelpng from "./cancel-button.png"
 import addTaskpng from "./addTask.png"
-import ReactDOM from 'react-dom';
 import React, { useState } from 'react';
-//import React from 'react';
 
 function App() {
 
@@ -15,6 +13,7 @@ function App() {
   const [assigneeText, setAssigneeText] = useState("")
   const [dueDateText, setDueDateText] = useState("")
   const [tasks, setTasks] = useState([])
+//  const [task, setCancel] = useState([])
   const handleChange = event => {
     setTitleText(event.value);
     setDescriptionText(event.value);
@@ -26,7 +25,13 @@ function App() {
     setTasks([...tasks, { titleText, descriptionText, assigneeText, dueDateText }]); // tasks is the current state and then you are updating with titleText
     alert("Task added: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
   }
-  console.log(tasks) // testing component added to check if the tasks are being rendered properly
+  // console.log(tasks) // testing component added to check if the tasks are being rendered properly
+
+  /* function handleTaskCancelled()
+  {
+    setCancel([...task, { " ", " ", " ", " " }]);
+    alert("Task cancelled: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
+  } */
 
   return (
     <React.Fragment>
@@ -34,9 +39,10 @@ function App() {
         <div className="tasks-container">
           <div className="tasks-title" > Chores4Us </div>
           {
-          tasks.map (item => {
-            return <li> {item.titleText} </li>
-          })
+            tasks.map (item => 
+              {
+                return <li> {item.titleText} </li>
+              })
           }
           <img className="add-task-button" src={buttonpng} />
           <img className="add-check-button" src={checkpng} />
@@ -96,7 +102,7 @@ function App() {
         </div>
 
         <div className="add-task-container">
-          <img className="cancel-button" src={cancelpng} />
+          <img className="cancel-button" src={cancelpng} /* onClick={handleTaskCancelled} */ />
           <img className="mark-completed-task-button" src={addTaskpng} onClick={handleTaskAdded} />
         </div>
 
