@@ -23,7 +23,7 @@ function App() {
   };
 
   function handleTaskAdded() {
-    setTasks([...tasks, { titleText, descriptionText, assigneeText, dueDateText }]) // tasks is the current state and then you are updating with titleText
+    setTasks([...tasks, { titleText, descriptionText, assigneeText, dueDateText }]); // tasks is the current state and then you are updating with titleText
     alert("Task added: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
   }
   console.log(tasks) // testing component added to check if the tasks are being rendered properly
@@ -31,8 +31,13 @@ function App() {
   return (
     <React.Fragment>
       <div className="App">
-        <div className="tasks-container" >
+        <div className="tasks-container">
           <div className="tasks-title" > Chores4Us </div>
+          {
+          tasks.map (item => {
+            return <li> {item.titleText} </li>
+          })
+          }
           <img className="add-task-button" src={buttonpng} />
           <img className="add-check-button" src={checkpng} />
         </div>
