@@ -13,7 +13,11 @@ function App() {
   const [assigneeText, setAssigneeText] = useState("")
   const [dueDateText, setDueDateText] = useState("")
   const [tasks, setTasks] = useState([])
-//  const [task, setCancel] = useState([])
+  const [renderAdd, setRenderAdd] = useState(false)
+  // make a new const for a setSelectedTask useState
+  // when the checkmark is clicked then map through the list of tasks and the set the completed component of the task to true
+  // another section to tasks.map for the completed tasks
+  //  const [task, setCancel] = useState([])
   const handleChange = event => {
     setTitleText(event.value);
     setDescriptionText(event.value);
@@ -22,7 +26,7 @@ function App() {
   };
 
   function handleTaskAdded() {
-    setTasks([...tasks, { titleText, descriptionText, assigneeText, dueDateText }]); // tasks is the current state and then you are updating with titleText
+    setTasks([...tasks, { titleText, descriptionText, assigneeText, dueDateText, completed: false }]); // tasks is the current state and then you are updating with titleText
     alert("Task added: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
   }
   // console.log(tasks) // testing component added to check if the tasks are being rendered properly
@@ -39,16 +43,19 @@ function App() {
         <div className="tasks-container">
           <div className="tasks-title" > Chores4Us </div>
           {
-            tasks.map (item => 
-              {
-                return <li> {item.titleText} </li>
-              })
+            // filter out all of the things which are not completed and then render them in the home page
+            // need another function that wll do the opposite for the completed tasks page
+            //tasks.filter.map (item ...)
+            tasks.map(item => {
+              return <li> <button> {item.titleText} </button> </li>
+            })
           }
+
           <img className="add-task-button" src={buttonpng} />
           <img className="add-check-button" src={checkpng} />
         </div>
 
-        <div className="add-task-container" >
+        {renderAdd && <div> <div className="add-task-container" >
           <div className="add-task-title" > Add Task</div>
           <div className="title" > Title: </div>
           <div className="title-box">
@@ -95,16 +102,18 @@ function App() {
           <div className="bi-weekly">Bi-Weekly</div>
         </div>
 
+          <div className="add-task-container">
+            <img className="cancel-button" src={cancelpng} /* onClick={handleTaskCancelled} */ />
+            <img className="mark-completed-task-button" src={addTaskpng} onClick={handleTaskAdded} />
+          </div> </div>}
+
         <div className="completed-container" >
           <div className="completed-tasks-title" > Completed Tasks </div>
           <img className="add-back-arrow-button" src={backarrow} />
 
         </div>
 
-        <div className="add-task-container">
-          <img className="cancel-button" src={cancelpng} /* onClick={handleTaskCancelled} */ />
-          <img className="mark-completed-task-button" src={addTaskpng} onClick={handleTaskAdded} />
-        </div>
+
 
       </div>
     </React.Fragment>
