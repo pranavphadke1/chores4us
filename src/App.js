@@ -18,7 +18,7 @@ function App() {
   // when the checkmark is clicked then map through the list of tasks and the set the completed component of the task to true
   const [selectedTask, setSelectedTask] = useState([])
   // another section to tasks.map for the completed tasks
-  //  const [task, setCancel] = useState([])
+  // const [task, setCancel] = useState([])
   const handleChange = event => {
     setTitleText(event.value);
     setDescriptionText(event.value);
@@ -36,6 +36,7 @@ function App() {
     setSelectedTask([...selectedTask, { titleText, descriptionText, assigneeText, dueDateText, completed: true }]);
     alert("Task marked complete: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
   }
+   console.log(selectedTask) // checking feature to test why the console is not marking these as completed
   /* function handleTaskCancelled()
   {
     setCancel([...task, { " ", " ", " ", " " }]);
@@ -52,7 +53,7 @@ function App() {
             // need another function that wll do the opposite for the completed tasks page
             //tasks.filter.map (item ...)
             tasks.map(item => {
-              return <li> <button> {item.titleText} </button> </li>
+              return <li> <button onClick={(c) => handleTaskCompleted(c.target.value)} > {item.titleText} </button> </li>
             })
           }
 
@@ -123,8 +124,6 @@ function App() {
           <img className="add-back-arrow-button" src={backarrow} />
 
         </div>
-
-
 
       </div>
     </React.Fragment>
