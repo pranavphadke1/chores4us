@@ -109,9 +109,9 @@
 }
 
 .add-back-arrow-button {
-    position: relative;
-    top: 440px;
-    left: -195px;
+    position: absolute;
+    top: 480px;
+    left: -10px;
     width: 90px;
     height: 44px;
 }

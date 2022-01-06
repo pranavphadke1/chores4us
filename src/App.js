@@ -57,7 +57,7 @@ function App() {
           }
 
           <img className="add-task-button" src={buttonpng} />
-          <img className="add-check-button" src={checkpng} />
+          <img className="add-check-button" src={checkpng} onClick={handleTaskCompleted} />
         </div>
 
         {renderAdd && <div> <div className="add-task-container" >
@@ -114,6 +114,12 @@ function App() {
 
         <div className="completed-container" >
           <div className="completed-tasks-title" > Completed Tasks </div>
+          {
+            // filter out all of the tasks which are marked as completed and then map it to render onto the screen
+            selectedTask.map(item => {
+              return <li> {item.titleText} </li>
+            })
+          }
           <img className="add-back-arrow-button" src={backarrow} />
 
         </div>
