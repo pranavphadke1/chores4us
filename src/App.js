@@ -13,9 +13,10 @@ function App() {
   const [assigneeText, setAssigneeText] = useState("")
   const [dueDateText, setDueDateText] = useState("")
   const [tasks, setTasks] = useState([])
-  const [renderAdd, setRenderAdd] = useState(false)
+  const [renderAdd, setRenderAdd] = useState(true)
   // make a new const for a setSelectedTask useState
   // when the checkmark is clicked then map through the list of tasks and the set the completed component of the task to true
+  const [selectedTask, setSelectedTask] = useState([])
   // another section to tasks.map for the completed tasks
   //  const [task, setCancel] = useState([])
   const handleChange = event => {
@@ -31,6 +32,10 @@ function App() {
   }
   // console.log(tasks) // testing component added to check if the tasks are being rendered properly
 
+  function handleTaskCompleted() {
+    setSelectedTask([...selectedTask, { titleText, descriptionText, assigneeText, dueDateText, completed: true }]);
+    alert("Task marked complete: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
+  }
   /* function handleTaskCancelled()
   {
     setCancel([...task, { " ", " ", " ", " " }]);
