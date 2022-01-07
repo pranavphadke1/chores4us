@@ -63,7 +63,7 @@ function App() {
             // need another function that wll do the opposite for the completed tasks page
             //tasks.filter.map (item ...)
             tasks.map(item => {
-              return <li> <button onClick={(c) => setSelectedTask(c.target.value)} > {item.titleText} </button> </li>
+              return <div> <input type="checkbox" id="tasked" name="done" /> <button onClick={(c) => setSelectedTask(c.target.value)}> {item.titleText} </button> </div>
             })
           }
 
