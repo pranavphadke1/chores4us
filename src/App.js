@@ -13,7 +13,7 @@ function App() {
   const [assigneeText, setAssigneeText] = useState("")
   const [dueDateText, setDueDateText] = useState("")
   const [tasks, setTasks] = useState([])
-  const [renderAdd, setRenderAdd] = useState(true)
+  const [renderAdd, setRenderAdd] = useState(false)
   // make a new const for a setSelectedTask useState
   // when the checkmark is clicked then map through the list of tasks and the set the completed component of the task to true
   const [selectedTask, setSelectedTask] = useState([])
@@ -36,12 +36,22 @@ function App() {
     setSelectedTask([...selectedTask, { titleText, descriptionText, assigneeText, dueDateText, completed: true }]);
     alert("Task marked complete: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
   }
-   console.log(selectedTask) // checking feature to test why the console is not marking these as completed
+  console.log(selectedTask) // checking feature to test why the console is not marking these as completed
   /* function handleTaskCancelled()
   {
     setCancel([...task, { " ", " ", " ", " " }]);
     alert("Task cancelled: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
   } */
+
+  // this is the function used for the adding task button
+  function handleRenderShow() {
+    setRenderAdd(renderAdd => true)
+  }
+
+  // this is the function used for the canceling task button inside of the add-task page
+  function handleRenderCancel() {
+    setRenderAdd(renderAdd => false)
+  }
 
   return (
     <React.Fragment>
@@ -53,11 +63,11 @@ function App() {
             // need another function that wll do the opposite for the completed tasks page
             //tasks.filter.map (item ...)
             tasks.map(item => {
-              return <li> <button onClick={(c) => handleTaskCompleted(c.target.value)} > {item.titleText} </button> </li>
+              return <li> <button onClick={(c) => setSelectedTask(c.target.value)} > {item.titleText} </button> </li>
             })
           }
 
-          <img className="add-task-button" src={buttonpng} />
+          <img className="add-task-button" src={buttonpng} onClick={handleRenderShow} />
           <img className="add-check-button" src={checkpng} onClick={handleTaskCompleted} />
         </div>
 
@@ -109,7 +119,7 @@ function App() {
         </div>
 
           <div className="add-task-container">
-            <img className="cancel-button" src={cancelpng} /* onClick={handleTaskCancelled} */ />
+            <img className="cancel-button" src={cancelpng} onClick={handleRenderCancel} />
             <img className="mark-completed-task-button" src={addTaskpng} onClick={handleTaskAdded} />
           </div> </div>}
 
