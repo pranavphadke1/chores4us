@@ -150,6 +150,18 @@
     color: #000000;
 }
 
+/*.individual-task-checkbox
+{
+    position: absolute;
+    width: 54px;
+    height: 55px;
+
+    background: #C4C4C4;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+}*/
+
+
 .input-title-box
 {
     position: absolute;

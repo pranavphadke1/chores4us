@@ -27,7 +27,7 @@ function App() {
   };
 
   function handleTaskAdded() {
-    setTasks([...tasks, { titleText, descriptionText, assigneeText, dueDateText, completed: false }]); // tasks is the current state and then you are updating with titleText
+    setTasks([...tasks, { titleText, descriptionText, assigneeText, dueDateText, checked: false }]); // tasks is the current state and then you are updating with titleText
     alert("Task added: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
   }
   // console.log(tasks) // testing component added to check if the tasks are being rendered properly
@@ -80,14 +80,23 @@ function App() {
             //tasks.filter.map (item ...)
             tasks.map(item => {
               return <div>
-                <input type="checkbox" id="tasked" name="done" onClick={handleTaskCompleted} />
-                <button onClick={(c) => setSelectedTask(c.target.value)}> {item.titleText} </button>
+                {/* try item.completed =true later and it won't work */}
+                <input class="individual-task-checkbox" type="checkbox" id="tasked" name="done" onClick={() => {
+                  setTasks(tasks.map(t => {
+                    if ( t.titleText == item.titleText )
+                    {
+                      return { ...t, checked: true }
+                    }
+                    return t
+                  }))
+                }} />
+                <button class="individual-task-button" onClick={(c) => setSelectedTask(c.target.value)}> {item.titleText} </button>
               </div>
             })
           }
 
           <img className="add-task-button" src={buttonpng} onClick={handleRenderShow} />
-          <img className="add-check-button" src={checkpng} onClick={handleMoveCompleted} />
+          <img className="add-check-button" src={checkpng} />
         </div>
 
         {renderAdd && <div> <div className="add-task-container" >
@@ -140,16 +149,19 @@ function App() {
           <div className="add-task-container">
             <img className="cancel-button" src={cancelpng} onClick={handleRenderCancel} />
             <img className="mark-completed-task-button" src={addTaskpng} onClick={handleTaskAdded} />
-          </div> </div>}
+          </div>
+        </div>
+        }
 
         <div className="completed-container" >
           <div className="completed-tasks-title" > Completed Tasks </div>
-          {
-            // filter out all of the tasks which are marked as completed and then map it to render onto the screen
-            selectedTask.map(item => {
-              return <li> {item.titleText} </li>
-            })
-          }
+          {/* filter out all of the tasks which are marked as completed and then map it to render onto the screen */}
+          <div> {tasks.filter(tasks => tasks.checked).map(filteredTask => (
+            <li>
+              {JSON.stringify(filteredTask)}
+            </li>
+          ))}
+          </div>
           <img className="add-back-arrow-button" src={backarrow} />
 
         </div>
