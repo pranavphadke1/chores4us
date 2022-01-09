@@ -150,7 +150,8 @@
     color: #000000;
 }
 
-.title-box {
+.input-title-box
+{
     position: absolute;
     top: 50px;
     left: 180px;
@@ -181,7 +182,8 @@
     color: #000000;
 }
 
-.description-box {
+.input-description-box
+{
     position: absolute;
     width: 265px;
     height: 57px;
@@ -213,7 +215,8 @@
     color: #000000;
 }
 
-.assignee-box {
+.input-assignee-box
+{
     position: absolute;
     left: 180px;
     top: 150px;
@@ -244,7 +247,8 @@
     color: #000000;
 }
 
-.due-date-box {
+.input-due-date-box
+{
     position: absolute;
     left: 180px;
     top: 185px;

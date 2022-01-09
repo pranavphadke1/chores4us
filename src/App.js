@@ -32,16 +32,11 @@ function App() {
   }
   // console.log(tasks) // testing component added to check if the tasks are being rendered properly
 
-  function handleTaskCompleted() {
-    setSelectedTask([...selectedTask, { titleText, descriptionText, assigneeText, dueDateText, completed: true }]);
-    alert("Task marked complete: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
-  }
+  /* function handleTaskCompleted() {
+     setSelectedTask([...selectedTask, { titleText, descriptionText, assigneeText, dueDateText, completed: true }]);
+     alert("Task marked complete: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
+   } */
   console.log(selectedTask) // checking feature to test why the console is not marking these as completed
-  /* function handleTaskCancelled()
-  {
-    setCancel([...task, { " ", " ", " ", " " }]);
-    alert("Task cancelled: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
-  } */
 
   // this is the function used for the adding task button
   function handleRenderShow() {
@@ -51,6 +46,27 @@ function App() {
   // this is the function used for the canceling task button inside of the add-task page
   function handleRenderCancel() {
     setRenderAdd(renderAdd => false)
+  }
+
+  // When the checkbox is clicked, then you want to call a function stating that the task has been marked as completed
+  function handleTaskCompleted() {
+    var taskTest = document.getElementById("tasked")
+
+    if (taskTest.checked == true) {
+      alert("Task marked complete: " + titleText + ", Description: " + descriptionText + ", Assignee: " + assigneeText + ", Due Date: " + dueDateText);
+    }
+  }
+
+  // When the checkmark is clicked then the tasks which are marked as complete will be moved to the completed tab
+  function handleMoveCompleted() {
+    alert("The checkmarked tasks have been moved to the completed side");
+    return (
+      <div> {tasks.filter(tasks => tasks.checked).map(filteredTask => (
+        <li>
+          {filteredTask}
+        </li>
+      ))} </div>
+    );
   }
 
   return (
@@ -63,48 +79,51 @@ function App() {
             // need another function that wll do the opposite for the completed tasks page
             //tasks.filter.map (item ...)
             tasks.map(item => {
-              return <div> <input type="checkbox" id="tasked" name="done" /> <button onClick={(c) => setSelectedTask(c.target.value)}> {item.titleText} </button> </div>
+              return <div>
+                <input type="checkbox" id="tasked" name="done" onClick={handleTaskCompleted} />
+                <button onClick={(c) => setSelectedTask(c.target.value)}> {item.titleText} </button>
+              </div>
             })
           }
 
           <img className="add-task-button" src={buttonpng} onClick={handleRenderShow} />
-          <img className="add-check-button" src={checkpng} onClick={handleTaskCompleted} />
+          <img className="add-check-button" src={checkpng} onClick={handleMoveCompleted} />
         </div>
 
         {renderAdd && <div> <div className="add-task-container" >
           <div className="add-task-title" > Add Task</div>
           <div className="title" > Title: </div>
-          <div className="title-box">
+          <div>
             <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
               <div class="input">
-                <input type="text" name="name" id="title-box-form" value={titleText} onChange={(e) => setTitleText(e.target.value)} required />
+                <input class="input-title-box" type="text" name="name" id="title-box-form" value={titleText} onChange={(e) => setTitleText(e.target.value)} required />
                 <label for="form-name"></label>
               </div>
             </form>
           </div>
           <div className="description"> Description:</div>
-          <div className="description-box">
+          <div>
             <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
               <div class="input">
-                <input type="text" name="name" id="description-box-form" value={descriptionText} onChange={(e) => setDescriptionText(e.target.value)} required />
+                <input class="input-description-box" type="text" name="name" id="description-box-form" value={descriptionText} onChange={(e) => setDescriptionText(e.target.value)} required />
                 <label for="form-name"></label>
               </div>
             </form>
           </div>
           <div className="assignee">Assignee:</div>
-          <div className="assignee-box">
+          <div>
             <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
               <div class="input">
-                <input type="text" name="name" id="assignee-box-form" value={assigneeText} onChange={(e) => setAssigneeText(e.target.value)} required />
+                <input class="input-assignee-box" type="text" name="name" id="assignee-box-form" value={assigneeText} onChange={(e) => setAssigneeText(e.target.value)} required />
                 <label for="form-name"></label>
               </div>
             </form>
           </div>
           <div className="due-date">Due Date:</div>
-          <div className="due-date-box">
+          <div>
             <form method="post" action-xhr="/submit-form" target="_top" class="main-form">
               <div class="input">
-                <input type="text" name="name" id="due-date-box-form" value={dueDateText} onChange={(e) => setDueDateText(e.target.value)} required />
+                <input class="input-due-date-box" type="text" name="name" id="due-date-box-form" value={dueDateText} onChange={(e) => setDueDateText(e.target.value)} required />
                 <label for="form-name"></label>
               </div>
             </form>
