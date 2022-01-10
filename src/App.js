@@ -85,6 +85,7 @@ function App() {
                   setTasks(tasks.map(t => {
                     if ( t.titleText == item.titleText )
                     {
+                      alert(t.titleText + " marked complete!")
                       return { ...t, checked: true }
                     }
                     return t
