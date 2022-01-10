@@ -27,6 +27,7 @@
     color: #000000;
 }
 
+
 /*
 .individual-task-checkbox
 {
@@ -178,8 +179,7 @@
     color: #000000;
 }
 
-.input-title-box
-{
+.input-title-box {
     position: absolute;
     top: 50px;
     left: 180px;
@@ -210,8 +210,7 @@
     color: #000000;
 }
 
-.input-description-box
-{
+.input-description-box {
     position: absolute;
     width: 265px;
     height: 57px;
@@ -243,8 +242,7 @@
     color: #000000;
 }
 
-.input-assignee-box
-{
+.input-assignee-box {
     position: absolute;
     left: 180px;
     top: 150px;
@@ -275,8 +273,7 @@
     color: #000000;
 }
 
-.input-due-date-box
-{
+.input-due-date-box {
     position: absolute;
     left: 180px;
     top: 185px;
