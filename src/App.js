@@ -157,9 +157,11 @@ function App() {
           <div className="completed-tasks-title" > Completed Tasks </div>
           {/* filter out all of the tasks which are marked as completed and then map it to render onto the screen */}
           <div> {tasks.filter(tasks => tasks.checked).map(filteredTask => (
-            <li>
-              {JSON.stringify(filteredTask)}
-            </li>
+            <div className="compTaskBox">
+              <ul>
+                  {JSON.stringify(filteredTask.titleText + " " + filteredTask.descriptionText)}
+              </ul>
+            </div>
           ))}
           </div>
           <img className="add-back-arrow-button" src={backarrow} />

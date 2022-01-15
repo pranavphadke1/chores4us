@@ -56,6 +56,18 @@
 }
 */
 
+.compTaskBox
+{
+    position: relative;
+    width: 476px;
+    height: 55px;
+
+    background: #DCEFD7;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 .add-task-button {
     position: absolute;
     left: -5px;
