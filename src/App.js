@@ -160,6 +160,7 @@ function App() {
             <div className="compTaskBox">
               <ul>
                   {JSON.stringify(filteredTask.titleText + " " + filteredTask.descriptionText)}
+                  {/* Need to add some sort of a line split and then need to return the description below it or next to it in a smaller font*/}
               </ul>
             </div>
           ))}
