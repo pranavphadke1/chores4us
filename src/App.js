@@ -80,7 +80,6 @@ function App() {
             //tasks.filter.map (item ...)
             tasks.map(item => {
               return <div>
-                {/* try item.completed =true later and it won't work */}
                 <input class="individual-task-checkbox" type="checkbox" id="tasked" name="done" onClick={() => {
                   setTasks(tasks.map(t => {
                     if ( t.titleText == item.titleText )
